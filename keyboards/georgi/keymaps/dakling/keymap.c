@@ -135,9 +135,16 @@ uint32_t processQwerty(bool lookup) {
     P( PWR | RP,     SEND(KC_LSFT); SEND(KC_8));
     P( PWR | RL,     SEND(KC_LSFT); SEND(KC_9));
     P( PWR | RT,     SEND(KC_LSFT); SEND(KC_0));
+    P( PWR | ST4,    SEND(DE_MINS));
+    P( PWR | LO | ST4,    SEND_STRING("_"));
+    P( PWR | LFT | LK,    SEND_STRING("€"));
     P( PWR | LSD,    SEND(DE_ADIA));
     P( PWR | RR,     SEND(DE_UDIA));
     P( PWR | RG,     SEND(DE_ODIA));
+    P( PWR | RF | RR,     SEND_STRING("\\"));
+    P( PWR | ST2,     SEND_STRING("|"));
+    P( PWR | LK,     SEND(DE_CIRC));
+    P( PWR | LO | LK,     SEND_STRING("°"));
     P( PWR | LW,     SEND_STRING("["));
     P( PWR | LR,     SEND_STRING("]"));
     P( PWR | LP | LW,     SEND_STRING("{"));
@@ -145,6 +152,9 @@ uint32_t processQwerty(bool lookup) {
     P( PWR | LSU | LSD,     SEND_STRING("@"));
     P( PWR | RP | RB,     SEND_STRING("<"));
     P( PWR | RL | RG,     SEND_STRING(">"));
+    P( PWR | RB,     SEND_STRING("~"));
+    P( PWR | RS,     SEND_STRING("#"));
+    P( PWR | LO | RS,     SEND_STRING("'"));
 
     // Number Row, Right
     /* P( RNO | LSU,    SEND(KC_1)); */
