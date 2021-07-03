@@ -9,6 +9,7 @@
 #include "mousekey.h"
 #include "keymap.h"
 #include "keymap_steno.h"
+#include "keymap_german.h"
 #include "wait.h"
 
 extern size_t keymapsCount;			// Total keymaps
