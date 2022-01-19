@@ -3,7 +3,7 @@
 # Make sure you have dfu-programmer installed!
 #----------------------------------------------------------------------------
 
-NO_REPEAT				 = no
+NO_REPEAT				 = yes
 VERBOSE					 = yes
 KEYBOARD_SHARED_EP       = yes
 CUSTOM_MATRIX			 = yes
@@ -18,7 +18,7 @@ NO_PRINT				 = yes
 CONSOLE_ENABLE			 = no
 DEBUG_MATRIX_SCAN_RATE   = no
 DEBUG_MATRIX			 = no
-ONLY_QWERTY				 = no
+ONLY_QWERTY				 = yes
 
 # A bunch of stuff that you shouldn't touch unless you
 # know what you're doing.

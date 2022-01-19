@@ -49,7 +49,7 @@ enum ORDER {
 };
 
 // Break it all out
-#define FN	STN(SFN)
+#define FN	STN(SRD)
 #define PWR	STN(SPWR)
 #define ST1 STN(SST1)
 #define ST2 STN(SST2)
@@ -81,5 +81,5 @@ enum ORDER {
 #define RG  STN(SRG)
 #define RT  STN(SRT)
 #define RS  STN(SRS)
-#define RD  STN(SRD)
+#define RD  STN(SFN)
 #define RZ  STN(SRZ)

@@ -28,10 +28,10 @@
  * ,---------------------------------.    ,------------------------------.
  * | FN  | LSU | LFT | LP | LH | ST1 |    | ST3 | RF | RP | RL | RT | RD |
  * |-----+-----+-----+----+----|-----|    |-----|----+----+----+----+----|
- * | PWR | LSD | LK  | LW | LR | ST2 |    | ST4 | RR | BB | RG | RS | RZ |
+ * | RNO | LSD | LK  | LW | LR | ST2 |    | ST4 | RR | BB | RG | RS | RZ |
  * `---------------------------------'    `------------------------------'
  *                   ,---------------,    .---------------.
- *                   | LNO | LA | LO |    | RE | RU | RNO |
+ *                   | LNO | LA | LO |    | RE | RU | PWR |
  *                   `---------------'    `---------------'
  */
 
@@ -57,7 +57,7 @@ uint32_t processQwerty(bool lookup) {
     /* P( LO  | LR  | LW,    CLICK_MOUSE(KC_MS_BTN1)); */
 
     // Thumb Chords
-    P( LA  | LO  | RE  | RU,    SEND(KC_CAPS));
+    /* P( LA  | LO  | RE  | RU,    SEND(KC_CAPS)); */
     /* P( LA  | RU,                SEND(KC_ESC)); */
     /* P( LO  | RE,                SEND(KC_LCTL)); */
     /* P( LNO | RNO | LA | RU,     SEND(KC_LCTL); SEND(KC_LSFT)); */
@@ -69,7 +69,6 @@ uint32_t processQwerty(bool lookup) {
     /* P( RS | RZ,                SEND(KC_LALT)); */
     /* P( LA | LNO,               SEND(KC_LCTL)); */
     /* P( LA | LO,                SEND(KC_LALT)); */
-    P( LO,                     SEND(KC_LSFT));
 
     // Function Layer
     P( FUNCT | RF | RR,    SEND(KC_F5));
@@ -111,17 +110,16 @@ uint32_t processQwerty(bool lookup) {
     P( MEDIA | RS,    SEND(KC_MUTE));
 
     // Number Row, Left
-    /* P( LNO | RU,    SEND(KC_LGUI); SEND(KC_LSFT)); */
-    P( LNO | LSU,    SEND(KC_1));
-    P( LNO | LFT,    SEND(KC_2));
-    P( LNO | LP,     SEND(KC_3));
-    P( LNO | LH,     SEND(KC_4));
-    P( LNO | ST1,    SEND(KC_5));
-    P( LNO | ST3,    SEND(KC_6));
-    P( LNO | RF,     SEND(KC_7));
-    P( LNO | RP,     SEND(KC_8));
-    P( LNO | RL,     SEND(KC_9));
-    P( LNO | RT,     SEND(KC_0));
+    P( RE | LSU,    SEND(KC_1));
+    P( RE | LFT,    SEND(KC_2));
+    P( RE | LP,     SEND(KC_3));
+    P( RE | LH,     SEND(KC_4));
+    P( RE | ST1,    SEND(KC_5));
+    P( RE | ST3,    SEND(KC_6));
+    P( RE | RF,     SEND(KC_7));
+    P( RE | RP,     SEND(KC_8));
+    P( RE | RL,     SEND(KC_9));
+    P( RE | RT,     SEND(KC_0));
 
     // Symbols
     P( PWR | RD,     SEND(KC_TAB));
@@ -135,8 +133,10 @@ uint32_t processQwerty(bool lookup) {
     P( PWR | RP,     SEND(KC_LSFT); SEND(KC_8));
     P( PWR | RL,     SEND(KC_LSFT); SEND(KC_9));
     P( PWR | RT,     SEND(KC_LSFT); SEND(KC_0));
-    P( PWR | ST4,    SEND(DE_MINS));
-    P( PWR | LO | ST4,    SEND_STRING("_"));
+    P( PWR | ST4,    SEND_STRING("'"));
+    P( PWR | ST3 | ST4,    SEND_STRING("+"));
+    P( PWR | RNO | ST3 | ST4,    SEND_STRING("*"));
+    P( PWR | RNO | ST4,    SEND_STRING("_"));
     P( PWR | LFT | LK,    SEND_STRING("€"));
     P( PWR | LSD,    SEND(DE_ADIA));
     P( PWR | RR,     SEND(DE_UDIA));
@@ -144,7 +144,7 @@ uint32_t processQwerty(bool lookup) {
     P( PWR | RF | RR,     SEND_STRING("\\"));
     P( PWR | ST2,     SEND_STRING("|"));
     P( PWR | LK,     SEND(DE_CIRC));
-    P( PWR | LO | LK,     SEND_STRING("°"));
+    P( PWR | RNO | LK,     SEND_STRING("°"));
     P( PWR | LW,     SEND_STRING("["));
     P( PWR | LR,     SEND_STRING("]"));
     P( PWR | LP | LW,     SEND_STRING("{"));
@@ -154,7 +154,7 @@ uint32_t processQwerty(bool lookup) {
     P( PWR | RL | RG,     SEND_STRING(">"));
     P( PWR | RB,     SEND_STRING("~"));
     P( PWR | RS,     SEND_STRING("#"));
-    P( PWR | LO | RS,     SEND_STRING("'"));
+    P( PWR | RNO | RS,     SEND_STRING("'"));
 
     // Number Row, Right
     /* P( RNO | LSU,    SEND(KC_1)); */
@@ -173,13 +173,15 @@ uint32_t processQwerty(bool lookup) {
     /* P( RU | RNO,    SEND(KC_TAB)); */
     /* P( RE | RU,     SEND(KC_BSPC)); */
     /* P( RD | RZ,     SEND(KC_ENT)); */
-    P( RE,          SEND(KC_LCTL));
+    /* P( RE,          SEND(KC_LCTL)); */
+    PC( LNO,          SEND(KC_LCTL));
     P( RD,          SEND(KC_BSPC));
     /* P( LNO,         SEND(KC_ENT)); */
-    P( RNO,         SEND(KC_LALT));
-    P( LA,          SEND(KC_SPC));
-    P( RU,          SEND(KC_LGUI));
-    P( RZ,          SEND(KC_ENT));
+    PC( RNO,         SEND(KC_LSFT));
+    PC( LA,          SEND(KC_LGUI));
+    PC( RU,          SEND(KC_SPC));
+    PC( RZ,          SEND(KC_ENT));
+    PC( LO,          SEND(KC_LALT));
 
     // Symbols and Numbers
  	/* /\* P( PWR | RE | RU,      SEND(KC_ENT)); *\/ */
@@ -229,7 +231,7 @@ uint32_t processQwerty(bool lookup) {
     P( ST1 | ST2,    SEND(KC_G));
     P( ST3 | ST4,    SEND(KC_H));
     P( RF  | RR,     SEND(KC_J));
-    P( RT  | RS,     SEND(KC_SCLN)); // ö
+    P( RT  | RS,     SEND(DE_SS)); // ß
     P( RG  | RL,     SEND(KC_L));
     P( RP  | RB,     SEND(KC_K));
     P( LSU,          SEND(KC_Q));
@@ -253,7 +255,7 @@ uint32_t processQwerty(bool lookup) {
     P( RG,           SEND(DE_DOT));
     /* P( LO | RG,      SEND(KC_LSFT); SEND(KC_SCLN)); */
     P( RT,           SEND(KC_P));
-    P( RS,           SEND(KC_MINUS));
+    P( RS,           SEND(DE_MINS));
     /* P( RNO,          SEND(KC_BSPC)); */
     /* P( LNO,          SEND(KC_BSPC)); */
 
@@ -270,8 +272,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Main layer, everything goes through here
     [STENO_LAYER] = LAYOUT_georgi(
         STN_FN,  STN_S1,  STN_TL,  STN_PL,  STN_HL,  STN_ST1,       STN_ST3, STN_FR,  STN_PR,  STN_LR,  STN_TR,  STN_DR,
-        STN_PWR, STN_S2,  STN_KL,  STN_WL,  STN_RL,  STN_ST2,       STN_ST4, STN_RR,  STN_BR,  STN_GR,  STN_SR,  STN_ZR,
-                                   STN_N1,  STN_A,   STN_O,         STN_E,   STN_U,   STN_N7
+        STN_N7, STN_S2,  STN_KL,  STN_WL,  STN_RL,  STN_ST2,       STN_ST4, STN_RR,  STN_BR,  STN_GR,  STN_SR,  STN_ZR,
+                                   STN_N1,  STN_A,   STN_O,         STN_E,   STN_U,   STN_PWR
     ),
 };
 
