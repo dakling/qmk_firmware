@@ -20,3 +20,5 @@ AUDIO_ENABLE = no           # Audio output on port C6
 DEFAULT_FOLDER = atreus/promicro
 
 TAP_TERM_KEYS_ENABLE = yes
+
+COMBO_ENABLE = yes
