@@ -1,7 +1,7 @@
 # Build Options
 #   change yes to no to disable
 #
-VPATH += keyboards/gboards
+# VPATH += keyboards/gboards
 BOOTMAGIC_ENABLE = no       # Enable Bootmagic Lite
 MOUSEKEY_ENABLE = yes       # Mouse keys
 EXTRAKEY_ENABLE = yes       # Audio control and System control
@@ -16,5 +16,8 @@ AUDIO_ENABLE = no           # Audio output
 DEFAULT_FOLDER = atreus/promicro
 
 TAP_TERM_KEYS_ENABLE = yes
+# TAP_DANCE_ENABLE = yes
 
 COMBO_ENABLE = yes
+
+# KEY_OVERRIDE_ENABLE = yes
