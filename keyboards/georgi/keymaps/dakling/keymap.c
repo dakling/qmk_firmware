@@ -46,6 +46,24 @@
 //
 // http://docs.gboards.ca
 uint32_t processQwerty(bool lookup) {
+    // TM1
+    P( ST3, SEND_STRING("0"); SEND(KC_TAB));
+    P( ST4, SEND_STRING("0.5"); SEND(KC_TAB));
+    P( RF, SEND_STRING("1"); SEND(KC_TAB));
+    P( RR, SEND_STRING("1.5"); SEND(KC_TAB));
+    P( RP, SEND_STRING("2"); SEND(KC_TAB));
+    P( RB, SEND_STRING("2.5"); SEND(KC_TAB));
+    P( RL, SEND_STRING("3"); SEND(KC_TAB));
+    P( RG, SEND_STRING("3.5"); SEND(KC_TAB));
+    P( RT, SEND_STRING("4"); SEND(KC_TAB));
+    P( RS, SEND_STRING("4.5"); SEND(KC_TAB));
+    P( RD, SEND_STRING("5"); SEND(KC_TAB));
+    P( RZ, SEND_STRING("5.5"); SEND(KC_TAB));
+    P( RE, SEND_STRING("6"); SEND(KC_TAB));
+    P( RU, SEND_STRING("6.5"); SEND(KC_TAB));
+
+    P( PWR, SEND(KC_ESC);SEND(KC_RGHT); SEND(KC_RGHT); SEND(KC_RGHT); SEND(KC_RGHT); SEND(KC_RGHT); SEND(KC_RGHT); SEND(KC_RGHT); SEND(KC_RGHT); SEND(KC_RGHT); SEND(KC_RGHT); SEND(KC_RGHT););
+
     // Specials
     /* P( RT  | RS  | RD  | RZ | LNO,        SEND_STRING(VERSION); SEND_STRING(__DATE__)); */
     /* P( LNO | RNO | LA  | LO | RE | RU,    SEND(KC_MPLY)); */
@@ -69,195 +87,6 @@ uint32_t processQwerty(bool lookup) {
     /* P( RS | RZ,                SEND(KC_LALT)); */
     /* P( LA | LNO,               SEND(KC_LCTL)); */
     /* P( LA | LO,                SEND(KC_LALT)); */
-
-    // Function Layer
-    P( FUNCT | RF | RR,    SEND(KC_F5));
-    P( FUNCT | RP | RB,    SEND(KC_F6));
-    P( FUNCT | RL | RG,    SEND(KC_F7));
-    P( FUNCT | RT | RS,    SEND(KC_F8));
-    P( FUNCT | RF,         SEND(KC_F1));
-    P( FUNCT | RP,         SEND(KC_F2));
-    P( FUNCT | RL,         SEND(KC_F3));
-    P( FUNCT | RT,         SEND(KC_F4));
-    P( FUNCT | RR,         SEND(KC_F9));
-    P( FUNCT | RG,         SEND(KC_F10));
-    P( FUNCT | RB,         SEND(KC_F11));
-    P( FUNCT | RS,         SEND(KC_F12));
-
-    // Movement Layer
-    P( MOVE | RF,     SEND(KC_DOWN));
-    P( MOVE | RP,     SEND(KC_UP));
-    P( MOVE | RL,     SEND(KC_RIGHT));
-    P( MOVE | ST3,    SEND(KC_LEFT));
-    P( MOVE | RT,     SEND(KC_PGUP));
-    P( MOVE | RS,     SEND(KC_PGDOWN));
-    P( MOVE | RG,     SEND(KC_RIGHT));
-    P( MOVE | ST4,    SEND(KC_LEFT));
-    P( MOVE | RR,     SEND(KC_DOWN));
-    P( MOVE | RB,     SEND(KC_UP));
-    P( MOVE | RL  | RG,     SEND(KC_RIGHT));
-    P( MOVE | ST3 | ST4,    SEND(KC_LEFT));
-    P( MOVE | RF  | RR,     SEND(KC_DOWN));
-    P( MOVE | RP  | RB,     SEND(KC_UP));
-
-    // Media Layer
-    P( MEDIA | RF,    SEND(KC_MPRV));
-    P( MEDIA | RP,    SEND(KC_MPLY));
-    P( MEDIA | RL,    SEND(KC_MPLY));
-    P( MEDIA | RT,    SEND(KC_MNXT));
-    P( MEDIA | RD,    SEND(KC_VOLU));
-    P( MEDIA | RZ,    SEND(KC_VOLD));
-    P( MEDIA | RS,    SEND(KC_MUTE));
-
-    // Number Row, Left
-    P( RE | LSU,    SEND(KC_1));
-    P( RE | LFT,    SEND(KC_2));
-    P( RE | LP,     SEND(KC_3));
-    P( RE | LH,     SEND(KC_4));
-    P( RE | ST1,    SEND(KC_5));
-    P( RE | ST3,    SEND(KC_6));
-    P( RE | RF,     SEND(KC_7));
-    P( RE | RP,     SEND(KC_8));
-    P( RE | RL,     SEND(KC_9));
-    P( RE | RT,     SEND(KC_0));
-
-    // Symbols
-    P( PWR | RD,     SEND(KC_TAB));
-    P( PWR | LSU,    SEND(KC_LSFT); SEND(KC_1));
-    P( PWR | LFT,    SEND(KC_LSFT); SEND(KC_2));
-    P( PWR | LP,     SEND(KC_LSFT); SEND(KC_3));
-    P( PWR | LH,     SEND(KC_LSFT); SEND(KC_4));
-    P( PWR | ST1,    SEND(KC_LSFT); SEND(KC_5));
-    P( PWR | ST3,    SEND(KC_LSFT); SEND(KC_6));
-    P( PWR | RF,     SEND(KC_LSFT); SEND(KC_7));
-    P( PWR | RP,     SEND(KC_LSFT); SEND(KC_8));
-    P( PWR | RL,     SEND(KC_LSFT); SEND(KC_9));
-    P( PWR | RT,     SEND(KC_LSFT); SEND(KC_0));
-    P( PWR | ST4,    SEND_STRING("'"));
-    P( PWR | ST3 | ST4,    SEND_STRING("+"));
-    P( PWR | RNO | ST3 | ST4,    SEND_STRING("*"));
-    P( PWR | RNO | ST4,    SEND_STRING("_"));
-    P( PWR | LFT | LK,    SEND_STRING("€"));
-    P( PWR | LSD,    SEND(DE_ADIA));
-    P( PWR | RR,     SEND(DE_UDIA));
-    P( PWR | RG,     SEND(DE_ODIA));
-    P( PWR | RF | RR,     SEND_STRING("\\"));
-    P( PWR | ST2,     SEND_STRING("|"));
-    P( PWR | LK,     SEND(DE_CIRC));
-    P( PWR | RNO | LK,     SEND_STRING("°"));
-    P( PWR | LW,     SEND_STRING("["));
-    P( PWR | LR,     SEND_STRING("]"));
-    P( PWR | LP | LW,     SEND_STRING("{"));
-    P( PWR | LH | LR,     SEND_STRING("}"));
-    P( PWR | LSU | LSD,     SEND_STRING("@"));
-    P( PWR | RP | RB,     SEND_STRING("<"));
-    P( PWR | RL | RG,     SEND_STRING(">"));
-    P( PWR | RB,     SEND_STRING("~"));
-    P( PWR | RS,     SEND_STRING("#"));
-    P( PWR | RNO | RS,     SEND_STRING("'"));
-
-    // Number Row, Right
-    /* P( RNO | LSU,    SEND(KC_1)); */
-    /* P( RNO | LFT,    SEND(KC_2)); */
-    /* P( RNO | LP,     SEND(KC_3)); */
-    /* P( RNO | LH,     SEND(KC_4)); */
-    /* P( RNO | ST1,    SEND(KC_5)); */
-    /* P( RNO | ST3,    SEND(KC_6)); */
-    /* P( RNO | RF,     SEND(KC_7)); */
-    /* P( RNO | RP,     SEND(KC_8)); */
-    /* P( RNO | RL,     SEND(KC_9)); */
-    /* P( RNO | RT,     SEND(KC_0)); */
-    /* P( RNO | LA,     SEND(KC_5)); */
-
-    // Specials
-    /* P( RU | RNO,    SEND(KC_TAB)); */
-    /* P( RE | RU,     SEND(KC_BSPC)); */
-    /* P( RD | RZ,     SEND(KC_ENT)); */
-    /* P( RE,          SEND(KC_LCTL)); */
-    PC( LNO,          SEND(KC_LCTL));
-    P( RD,          SEND(KC_BSPC));
-    /* P( LNO,         SEND(KC_ENT)); */
-    PC( RNO,         SEND(KC_LSFT));
-    PC( LA,          SEND(KC_LGUI));
-    PC( RU,          SEND(KC_SPC));
-    PC( RZ,          SEND(KC_ENT));
-    PC( LO,          SEND(KC_LALT));
-
-    // Symbols and Numbers
- 	/* /\* P( PWR | RE | RU,      SEND(KC_ENT)); *\/ */
-    /* /\* P( PWR | LA | LO,      SEND(KC_SPC)); *\/ */
-    /* P( PWR | LP | LW,      SEND(KC_LSFT); SEND(KC_9));       // ( */
-    /* P( PWR | LH | LR,      SEND(KC_LSFT); SEND(KC_0));       // ) */
-    /* P( PWR | ST1 | ST2,    SEND(KC_GRV));                    // ` */
-    /* /\* P( PWR | RD | RZ,      SEND(KC_ESC)); *\/ */
-    /* P( PWR | LSU | LSD,    SEND(KC_LSFT); SEND(KC_3));       // # */
-    /* P( PWR | LFT | LK,     SEND(KC_LSFT); SEND(KC_4));       // $ */
-    /* P( PWR | LSU,          SEND(KC_LSFT); SEND(KC_1));       // ! */
-    /* P( PWR | LSD,          SEND(KC_LSFT); SEND(KC_5));       // % */
-    /* P( PWR | LFT,          SEND(KC_LSFT); SEND(KC_2));       // @ */
-    /* P( PWR | LK,           SEND(KC_LSFT); SEND(KC_6));       // ^ */
-    /* P( PWR | LP,           SEND(KC_LSFT); SEND(KC_LBRC));    // { */
-    /* P( PWR | LW,           SEND(KC_LBRC)); */
-    /* P( PWR | LH,           SEND(KC_LSFT); SEND(KC_RBRC));    // } */
-    /* P( PWR | LR,           SEND(KC_RBRC)); */
-    /* P( PWR | ST1,          SEND(KC_LSFT); SEND(KC_BSLS));    // | */
-    /* P( PWR | ST2,          SEND(KC_LSFT); SEND(KC_GRV));     // ~ */
-    /* P( PWR | ST3,          SEND(KC_QUOT)); */
-    /* P( PWR | ST4,          SEND(KC_LSFT); SEND(KC_QUOT));    // " */
-    /* P( PWR | RF,           SEND(KC_KP_PLUS)); */
-    /* P( PWR | RR,           SEND(KC_LSFT); SEND(KC_7));       // & */
-    /* P( PWR | RP,           SEND(KC_MINS)); */
-    /* P( PWR | RB,           SEND(KC_EQL)); */
-    /* P( PWR | RL,           SEND(KC_SLSH)); */
-    /* P( PWR | RG,           SEND(KC_LSFT); SEND(KC_COMM));    // < */
-    /* P( PWR | RT,           SEND(KC_PAST)); */
-    /* P( PWR | RS,           SEND(KC_LSFT); SEND(KC_DOT));     // > */
-    /* P( PWR | RD,           SEND(KC_TAB)); */
-    /* P( PWR | LA,           SEND(KC_LSFT)); */
-    /* P( PWR | LO,           SEND(KC_SLSH)); */
-    /* P( PWR | RE,           SEND(KC_SCLN)); */
-    /* P( PWR | RU,           SEND(KC_LGUI)); */
-    /* P( PWR | LNO,          SEND(KC_ENT)); */
-    /* P( PWR | RF | RR,      SEND(KC_LEFT)); */
-    /* P( PWR | RP | RB,      SEND(KC_DOWN)); */
-    /* P( PWR | RL | RG,      SEND(KC_UP)); */
-    /* P( PWR | RT | RS,      SEND(KC_RIGHT)); */
-
-    // Letters
-    P( LSU | LSD,    SEND(KC_A));
-    P( LFT | LK,     SEND(KC_S));
-    P( LP  | LW,     SEND(KC_D));
-    P( LH  | LR,     SEND(KC_F));
-    P( ST1 | ST2,    SEND(KC_G));
-    P( ST3 | ST4,    SEND(KC_H));
-    P( RF  | RR,     SEND(KC_J));
-    P( RT  | RS,     SEND(DE_SS)); // ß
-    P( RG  | RL,     SEND(KC_L));
-    P( RP  | RB,     SEND(KC_K));
-    P( LSU,          SEND(KC_Q));
-    P( LSD,          SEND(KC_Z));
-    P( LFT,          SEND(KC_W));
-    P( LK,           SEND(KC_X));
-    P( LP,           SEND(KC_E));
-    P( LW,           SEND(KC_C));
-    P( LH,           SEND(KC_R));
-    P( LR,           SEND(KC_V));
-    P( ST1,          SEND(KC_T));
-    P( ST2,          SEND(KC_B));
-    P( ST3,          SEND(KC_Y));
-    P( ST4,          SEND(KC_N));
-    P( RF,           SEND(KC_U));
-    P( RR,           SEND(KC_M));
-    P( RP,           SEND(KC_I));
-    P( RB,           SEND(DE_COMM));
-    /* P( LO | RB,      SEND(DE_SCLN)); */
-    P( RL,           SEND(KC_O));
-    P( RG,           SEND(DE_DOT));
-    /* P( LO | RG,      SEND(KC_LSFT); SEND(KC_SCLN)); */
-    P( RT,           SEND(KC_P));
-    P( RS,           SEND(DE_MINS));
-    /* P( RNO,          SEND(KC_BSPC)); */
-    /* P( LNO,          SEND(KC_BSPC)); */
 
     return 0;
 }

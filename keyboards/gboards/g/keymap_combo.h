@@ -31,7 +31,7 @@ enum combos {
     COMBO_LENGTH
 };
 // Export length to combo module
-uint16_t COMBO_LEN = COMBO_LENGTH;
+/* uint16_t COMBO_LEN = COMBO_LENGTH; */
 
 // Bake combos into mem
 #undef COMB
