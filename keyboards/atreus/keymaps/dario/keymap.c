@@ -96,7 +96,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P    ,
     MOD_A,   MOD_S,   MOD_D,   MOD_F,   KC_G,                      KC_H,    MOD_J,   MOD_K,   MOD_L,   MOD_MINS,
     KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                      KC_N,    KC_M,    DE_COMM, DE_DOT,  S(DE_SS) ,
-    S(KC_EQL), MO(_MS), KC_LGUI,  MO_LW,   MO_RSA,  KC_LCTL, KC_LALT, MO_LW,  MO_RS, KC_LSFT, KC_RGUI, KC_EQL
+    S(KC_EQL), MO(_MS), KC_CAPS_LOCK,  MO_LW,   MO_RSA,  KC_LCTL, KC_LALT, MO_LW,  MO_RS, KC_LSFT, KC_RGUI, KC_EQL
   ),
 
   [_RS] = LAYOUT( /* [> RAISE <] */
@@ -106,8 +106,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     DE_PIPE,  KC_DELETE, KC_LGUI,KC_TRNS, KC_BSPC, KC_LCTL, KC_LALT, KC_TAB,  KC_TRNS, KC_LSFT,  DE_MINS, KC_NO  ),
 
   [_LW] = LAYOUT( /* [> LOWER <] */
-    DE_AT,   VIM_W,   DE_EURO,   KC_MS_WH_DOWN,   KC_MS_WH_UP,                     KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10  ,
-    KC_CAPS_LOCK,  KC_MS_BTN3, KC_MS_BTN2, KC_MS_BTN1, KC_MS_BTN4,                     KC_SPC,   KC_SPC, KC_TAB, KC_ENT, DE_TILD ,
+    DE_CIRC,   VIM_W,   DE_EURO,   KC_MS_WH_DOWN,   KC_MS_WH_UP,                     KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10  ,
+    DE_AT,  KC_MS_BTN3, KC_MS_BTN2, KC_MS_BTN1, KC_MS_BTN4,                     KC_SPC,   KC_SPC, KC_TAB, KC_ENT, DE_TILD ,
     QK_BOOT,  KC_VOLU, KC_PGDN,  KC_PGUP,   VIM_B,                   KC_NO, DE_MICR, DE_LABK,   DE_RABK, DE_BSLS  ,
     KC_MENU, KC_VOLD, KC_LGUI, KC_TRNS, KC_BSPC, KC_LCTL, KC_LALT, KC_TAB,  KC_TRNS, KC_LSFT, KC_SLCT, KC_PAUS ),
 
