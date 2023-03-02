@@ -4,9 +4,9 @@
    height="297mm"
    id="svg3004"
    version="1.1"
-   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14, custom)"
    sodipodi:docname="layout-custom.svg"
-   inkscape:export-filename="/home/klingenberg/Documents/programming/qmk/qmk_firmware/keyboards/atreus/keymaps/dario/map.png"
+   inkscape:export-filename="map.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -36,22 +36,24 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="958"
-     inkscape:window-height="1057"
+     inkscape:window-width="1918"
+     inkscape:window-height="1054"
      id="namedview4703"
      showgrid="false"
      inkscape:document-units="mm"
      units="mm"
      inkscape:zoom="0.66995562"
-     inkscape:cx="570.18703"
-     inkscape:cy="637.35565"
+     inkscape:cx="570.93334"
+     inkscape:cy="518.69107"
      inkscape:window-x="0"
-     inkscape:window-y="1101"
+     inkscape:window-y="1104"
      inkscape:window-maximized="1"
      inkscape:current-layer="g5832"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:pagecheckerboard="0" />
+     inkscape:pagecheckerboard="0"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1" />
   <desc
      id="desc3006">/home/phil/ErgoDOX Case Layer 3 Plate - Left.dxf - scale = 1.000000</desc>
   <defs
@@ -1098,12 +1100,12 @@
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
          x="744.96082"
-         y="970.31549"
+         y="974.31549"
          id="text24280"><tspan
            sodipodi:role="line"
            id="tspan24278"
            x="744.96082"
-           y="970.31549">ß</tspan></text>
+           y="974.31549">´</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
@@ -1196,14 +1198,14 @@
            y="905.55377">.</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:18.6667px;line-height:1.25;font-family:sans-serif"
-         x="19.250549"
-         y="963.52069"
+         style="font-size:40px;line-height:1.25;font-family:sans-serif"
+         x="27.250549"
+         y="975.52069"
          id="text30200"><tspan
            sodipodi:role="line"
            id="tspan30198"
-           x="19.250549"
-           y="963.52069">esc</tspan></text>
+           x="27.250549"
+           y="975.52069">`</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:18.6667px;line-height:1.25;font-family:sans-serif"
@@ -1217,13 +1219,17 @@
       <text
          xml:space="preserve"
          style="font-size:18.6667px;line-height:1.25;font-family:sans-serif"
-         x="140.20351"
-         y="960.68036"
+         x="148.20351"
+         y="948.68036"
          id="text33006"><tspan
            sodipodi:role="line"
            id="tspan33004"
-           x="140.20351"
-           y="960.68036">super</tspan></text>
+           x="148.20351"
+           y="948.68036">caps</tspan><tspan
+           sodipodi:role="line"
+           x="148.20351"
+           y="972.01373"
+           id="tspan1348">lock</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:18.6667px;line-height:1.25;font-family:sans-serif"
@@ -1316,14 +1322,14 @@
            y="1586.2688">ent</tspan></text>
       <text
          xml:space="preserve"
-         style="font-size:18.6667px;line-height:1.25;font-family:sans-serif"
-         x="722.1618"
-         y="897.72058"
+         style="font-size:40px;line-height:1.25;font-family:sans-serif"
+         x="734.22107"
+         y="905.06525"
          id="text831"><tspan
            sodipodi:role="line"
            id="tspan829"
-           x="722.1618"
-           y="897.72058">bspc</tspan></text>
+           x="734.22107"
+           y="905.06525">?</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:18.6667px;line-height:1.25;font-family:sans-serif"
@@ -1394,7 +1400,7 @@
            sodipodi:role="line"
            id="tspan76471"
            x="84.961853"
-           y="1334.8014">tab</tspan></text>
+           y="1334.8014">del</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:18.6667px;line-height:1.25;font-family:sans-serif"
@@ -1458,23 +1464,13 @@
       <text
          xml:space="preserve"
          style="font-size:18.6667px;line-height:1.25;font-family:sans-serif"
-         x="35.895935"
-         y="1581.088"
-         id="text78705"><tspan
-           sodipodi:role="line"
-           id="tspan78703"
-           x="35.895935"
-           y="1581.088">bcsp</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-size:18.6667px;line-height:1.25;font-family:sans-serif"
-         x="32.961853"
+         x="22.961853"
          y="1644.8014"
          id="text78709"><tspan
            sodipodi:role="line"
            id="tspan78707"
-           x="32.961853"
-           y="1644.8014">tab</tspan></text>
+           x="22.961853"
+           y="1644.8014">reset</tspan></text>
       <text
          xml:space="preserve"
          style="font-size:18.6667px;line-height:1.25;font-family:sans-serif"
@@ -2111,13 +2107,13 @@
     <text
        xml:space="preserve"
        style="font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px"
-       x="49.317997"
-       y="1524.4081"
+       x="37.317997"
+       y="1588.4081"
        id="text48445"><tspan
          sodipodi:role="line"
          id="tspan48443"
-         x="49.317997"
-         y="1524.4081">@</tspan></text>
+         x="37.317997"
+         y="1588.4081">@</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px"
@@ -2257,26 +2253,74 @@
     <text
        xml:space="preserve"
        style="font-size:18.6667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px"
-       x="97.133301"
-       y="1582.0809"
+       x="101.1333"
+       y="1584.0809"
        id="text91621"
        inkscape:export-filename="/home/klingenberg/Documents/programming/qmk/qmk_firmware/keyboards/atreus/keymaps/dario/map.png"
        inkscape:export-xdpi="90"
        inkscape:export-ydpi="90"><tspan
          sodipodi:role="line"
          id="tspan91619"
-         x="97.133301"
-         y="1582.0809">home</tspan></text>
+         x="101.1333"
+         y="1584.0809">btn3</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:18.6667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px"
-       x="173.55176"
+       x="169.55176"
        y="1578.8568"
        id="text92219"><tspan
          sodipodi:role="line"
          id="tspan92217"
-         x="173.55176"
-         y="1578.8568">end</tspan></text>
+         x="169.55176"
+         y="1578.8568">btn2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;line-height:1.25;font-family:sans-serif;letter-spacing:0px"
+       x="54.289261"
+       y="1536.051"
+       id="text1352"><tspan
+         sodipodi:role="line"
+         id="tspan1350"
+         x="54.289261"
+         y="1536.051">^</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px"
+       x="247.55176"
+       y="1530.8568"
+       id="text1356"><tspan
+         sodipodi:role="line"
+         id="tspan1354"
+         x="247.55176"
+         y="1530.8568">scr</tspan><tspan
+         sodipodi:role="line"
+         x="247.55176"
+         y="1554.1902"
+         id="tspan1358">up</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px"
+       x="305.55176"
+       y="1560.8568"
+       id="text1364"><tspan
+         sodipodi:role="line"
+         id="tspan1360"
+         x="305.55176"
+         y="1560.8568">scr</tspan><tspan
+         sodipodi:role="line"
+         x="305.55176"
+         y="1584.1902"
+         id="tspan1362">dn</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:18.6667px;line-height:1.25;font-family:sans-serif;letter-spacing:0px"
+       x="231.55176"
+       y="1608.8568"
+       id="text1368"><tspan
+         sodipodi:role="line"
+         id="tspan1366"
+         x="231.55176"
+         y="1608.8568">btn1</tspan></text>
   </g>
   <g
      style="display:inline"
