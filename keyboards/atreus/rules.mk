@@ -12,6 +12,7 @@ BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 UNICODE_ENABLE = yes        # Unicode
 AUDIO_ENABLE = no           # Audio output
+SEND_STRING_ENABLE = yes    
 
 DEFAULT_FOLDER = atreus/promicro
 

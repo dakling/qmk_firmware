@@ -17,6 +17,7 @@
 #define _RS 1
 #define _LW 2
 #define _MS 3
+#define _TM 4
 
 #define MO_RS LT(_RS, KC_SPC)
 #define MO_LW LT(_LW, KC_SPC)
@@ -100,6 +101,8 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     }
 }
 
+/* #include "./tm.c" */
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_QW] = LAYOUT( /* Qwerty */
     KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P    ,
@@ -112,7 +115,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     DE_CIRC,  KC_7,    KC_8,   KC_9,    KC_0,                      KC_F1,   KC_F2,    KC_F3,   KC_F4,    KC_F5 ,
     MOD_ESC,  MOD_4,   MOD_5,  MOD_6,   DE_UDIA,                   KC_LEFT, MOD_DOWN, MOD_UP,  MOD_RGHT, MOD_PLUS,
     DE_ODIA,  KC_1  ,  KC_2,   KC_3,    DE_ADIA,                   DE_LBRC, DE_RBRC,  DE_LCBR, DE_RCBR,  DE_HASH ,
-    DE_PIPE,  KC_DELETE, KC_LGUI,KC_TRNS, KC_BSPC, KC_CAPS_LOCK, KC_LALT, KC_TAB,  KC_TRNS, KC_LSFT,  DE_MINS, KC_NO  ),
+    DE_PIPE,  KC_DELETE, KC_LGUI,KC_TRNS, KC_BSPC, KC_CAPS_LOCK, KC_LALT, KC_TAB,  KC_TRNS, KC_LSFT,  DE_MINS, DF(_TM) ),
 
   [_LW] = LAYOUT( /* [> LOWER <] */
     DE_CIRC,   VIM_W,   DE_EURO,   KC_MS_WH_DOWN,   KC_MS_WH_UP,                     KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10  ,
@@ -125,4 +128,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     MOD_LGUI,  MOD_LALT, MOD_LCTL, MOD_LSFT, KC_NO,                     KC_MS_LEFT, KC_MS_DOWN, KC_MS_UP, KC_MS_RIGHT, KC_NO ,
     KC_NO,  KC_NO, KC_NO,  KC_NO,   KC_NO,                    KC_MS_BTN4, KC_MS_BTN1,   KC_MS_BTN2, KC_MS_BTN3  ,  KC_NO,
     KC_TRNS, KC_NO, KC_NO, KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO,  KC_NO, KC_NO, KC_NO, KC_NO )
+
+  /* , */
+  /* [_TM] = LAYOUT( */
+  /*     KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                     KC_NO, KC_LEFT, KC_NO,   KC_NO,   KC_NO  , */
+  /*     SS_0, SS_1, SS_2, SS_3, SS_4,                                  SS_5, SS_6, SS_7, SS_8, SS_9, */
+  /*     SS_05, SS_15, SS_25, SS_35, SS_45,                             SS_55, SS_65, SS_75, SS_85, SS_95, */
+  /*     KC_NO, KC_NO, KC_NO, SS_0, SS_05, KC_NO,                       SS_GO, KC_NO,  SS_05, KC_NO, KC_NO ,DF(_QW)) */
 };
